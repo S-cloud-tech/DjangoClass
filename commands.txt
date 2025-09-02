@@ -9,4 +9,4 @@ python manage.py runserver - To start your server
 Ctrl + C - To stop your server
 python manage.py makemigrations - To makemigrations to models created in models.py file
 python manage.py migrate - To migrate your models into the database
-
+python manage.py createsuperuser - To create credentials which you will use to login to th admin page
