@@ -1,0 +1,12 @@
+mkdir <foldername> - To create folder
+cd <foldername> - To enter the folder created
+python -m venv env - To create virtual environment
+env\scripts\activate - To activate virtual environment
+
+djang-admin startproject <project name> . - To create a django project inside folder already created
+python manage.py startapp <app name> - To create an app(componment of your project)
+python manage.py runserver - To start your server
+Ctrl + C - To stop your server
+python manage.py makemigrations - To makemigrations to models created in models.py file
+python manage.py migrate - To migrate your models into the database
+
