@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Books is the Database<h1/>
+    <a href="{% url "add_book" %}">Add Books</a>
+
+    {% for book in Book %}
+    <h1>{{book.title}}</h1>
+    <h2> {{book.author }}</h2>
+    {% endfor %}
+{% endblock content %}

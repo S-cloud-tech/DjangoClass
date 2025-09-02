@@ -1,0 +1,93 @@
+Phase 1: Core Django Fundamentals
+🎯 Goal: Understand Django’s structure, MVT architecture, and ORM.
+- Environment Setup
+- Install Python, virtualenv, Django, Git, DRF.
+- Create a Django project: library_project.
+- Create an app: library.
+- Create GitHub repo and push our project to GitHub through the use of git.
+- Django Basics
+- Understand MVT (Model-View-Template).
+- Learn how URLs, views, and templates work (Template engine).
+- Practice with a homepage (index.html) that says “Welcome to Library System”.
+- Database Models
+- Define models for core entities:
+- Book (title, author, ISBN, is_available, category, published_date).
+- Member (name, email, membership_date).
+- Borrow (book, member, borrowed_date, return_date).
+- Run migrations, test in Django Admin.
+- Django Admin
+- Register models.
+- Customize list displays, filters, and search.
+- 🛠️ Checkpoint: You can add books and members via the Django Admin.
+
+
+Phase 2: Django REST Framework Basics
+🎯 Goal: Build APIs for your models.
+- Serializers
+- Create serializers for Book, Member, and Borrow.
+- APIView & ViewSets
+- Implement basic CRUD APIs:
+- /api/books/ → List & Create.
+- /api/books/<id>/ → Retrieve, Update, Delete.
+- /api/members/ → Manage members.
+- Routers
+- Use DRF’s DefaultRouter for automatic URL mapping.
+- Testing APIs
+- Use Django shell, Postman, or cURL to test endpoints.
+🛠️ Checkpoint: You can create/list/update/delete books and members via API.
+
+
+Phase 3: Authentication & Permissions
+🎯 Goal: Secure the API.
+- User Authentication
+- Add django.contrib.auth.
+- Use DRF Token Authentication or Simple JWT.
+- Create endpoints for user registration & login.
+- Permissions
+- Admin can manage all records.
+- Members can only view books and their borrow history.
+🛠️ Checkpoint: Only logged-in users can access the API.
+
+
+Phase 4: Borrowing System
+🎯 Goal: Implement book lending logic.
+- Borrow API
+- Endpoint for borrowing a book:
+- Check if available.
+- Update is_available = False.
+- Create a Borrow record.
+- Return API
+- Mark book as returned.
+- Update availability.
+- Validation
+- Prevent borrowing if already borrowed.
+- Enforce max borrow limit (e.g., 3 books per member).
+🛠️ Checkpoint: Members can borrow and return books correctly.
+
+
+Phase 5: Advanced Features
+🎯 Goal: Enhance functionality & user experience.
+- Filtering & Search
+- Search books by title, author, category.
+- Filter books by availability.
+- Pagination
+- Paginate book listings.
+- Signals
+- Send notifications (e.g., email when a book is borrowed).
+- Custom Permissions
+Example: Only staff can add/remove books.
+
+
+Phase 6: Extra Features (Optional but Strong)
+🎯 Goal: Move towards a production-ready system.
+- Reports & Analytics
+- Track most borrowed books.
+- Track overdue books.
+- Celery + Redis
+- Send overdue reminders as background tasks.
+- Swagger / DRF Spectacular
+- Auto-generate API docs.
+- Dockerize the App
+- Learn containerization.
+- Deploy
+- Deploy to Render, Railway, or Heroku.
